@@ -38,11 +38,9 @@ textarea {
 
 .card-text {
     position: absolute;
-    text-align: center;
     z-index: 9999;
     color: white;
-    padding-top: 350px;
-    padding-left: 500px;
+    font-size: 5vh;
 }
 
 .centered-image {

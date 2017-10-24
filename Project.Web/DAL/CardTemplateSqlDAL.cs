@@ -10,6 +10,7 @@ namespace Project.Web.DAL
 {
     public class CardTemplateSqlDAL
     {
+        //private string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=GreetingCard;User ID=te_student;Password=sqlserver1";
         private string connectionString = ConfigurationManager.ConnectionStrings["Peter"].ConnectionString;
         private const string SQL_GetTemplates = "select * from card_templates;";
         private const string SQL_GetTemplate = "select * from card_templates where card_templates.id = @tempId;";

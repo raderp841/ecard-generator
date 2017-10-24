@@ -7,5 +7,26 @@
 
 <h2>SavedCard</h2>
 
-<h4 class="card-text">@Model.Card.Message</h4>
-<div class="centered-image"><img src="@Url.Content("~/Content/img/e-cards/" + Model.Template.ImageName)" alt="Alternate Text" class="final-image" /></div>
+@*<h4 class="card-text">@Model.Card.Message</h4>
+<div class="thumbnail"><img src="@Url.Content("~/Content/img/e-cards/" + Model.Template.ImageName)" alt="Alternate Text" class="thumbnail" /></div>*@
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-12">
+
+            <img src="@Url.Content("~/Content/img/e-cards/" + Model.Template.ImageName)" alt="test" class="img-responsive">
+
+            <div class="carousel-caption">
+                <h1>@Model.Card.Message</h1>
+            </div>
+
+        </div>
+        
+
+
+    </div>
+
+
+</div>
