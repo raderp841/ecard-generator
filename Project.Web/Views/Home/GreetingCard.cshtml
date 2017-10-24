@@ -1,0 +1,57 @@
+﻿@model Project.Web.Models.FullCard
+
+@{
+    ViewBag.Title = "GreetingCard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="centered">
+<h2>View</h2>
+
+@{ 
+    <h2 class="card-text">@Model.Template.Name</h2>
+    <img src="@Url.Content("~/Content/img/e-cards/" + Model.Template.ImageName)"  alt="Alternate Text"  class="thumbnail"/>
+    
+}
+
+<form class="form-horizontal" action="@Url.Action("SavedCard","Home")" method="post">
+    <div style="padding-left: 100px">
+        <div class="text-boxes">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Card.FromName)
+                @Html.TextBoxFor(m => m.Card.FromName)
+                @Html.ValidationMessageFor(m => m.Card.FromName)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Card.ToName)
+                @Html.TextBoxFor(m => m.Card.ToName)
+                @Html.ValidationMessageFor(m => m.Card.ToName)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Card.FromEmail)
+                @Html.TextBoxFor(m => m.Card.FromEmail)
+                @Html.ValidationMessageFor(m => m.Card.FromEmail)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Card.ToEmail)
+                @Html.TextBoxFor(m => m.Card.ToEmail)
+                @Html.ValidationMessageFor(m => m.Card.ToEmail)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Card.Message)
+                @Html.TextAreaFor(m => m.Card.Message)
+                @Html.ValidationMessageFor(m => m.Card.Message)
+            </div>
+            <div>
+
+                @Html.Hidden("TemplateId", Model.Template.Id)
+            </div>
+            <div class="form-group">
+                <button>Submit!</button>
+            </div>
+        </div>
+    </div>
+    
+
+</form>
+
+</div>

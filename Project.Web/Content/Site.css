@@ -1,0 +1,61 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image: url(http://www.planwallpaper.com/static/images/recycled_texture_background_by_sandeep_m-d6aeau9_PZ9chud.jpg)
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.text-boxes{
+    
+    max-width: 00px;
+    text-align:center;
+    
+
+}
+
+.imageTemp{
+    vertical-align:top;
+    max-width:500px;
+}
+
+.final-image{
+    
+    max-width:700px;
+    position:relative;
+}
+
+.card-text {
+    position: absolute;
+    text-align: center;
+    z-index: 9999;
+    color: white;
+    padding-top: 350px;
+    padding-left: 500px;
+}
+
+.centered-image {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.subBody{
+    background-color:white;
+    border-radius:20px;
+}
+
+.centered{
+    text-align:center;
+}

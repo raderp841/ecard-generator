@@ -1,0 +1,11 @@
+﻿@model Project.Web.Models.FullCard
+
+@{
+    ViewBag.Title = "SavedCard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>SavedCard</h2>
+
+<h4 class="card-text">@Model.Card.Message</h4>
+<div class="centered-image"><img src="@Url.Content("~/Content/img/e-cards/" + Model.Template.ImageName)" alt="Alternate Text" class="final-image" /></div>

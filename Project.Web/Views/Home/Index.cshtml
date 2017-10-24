@@ -1,0 +1,44 @@
+﻿@using Project.Web.Models;
+@model List<CardTemplate>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="centered">
+    <h2>Choose A Template</h2>
+
+    @{
+
+        <table class="indexTable">
+
+            @foreach (CardTemplate temp in Model)
+            {
+
+
+                <tr class="row">
+                    <td class="thumbnail">@temp.Name</td>
+                </tr>
+                <tr class="row">
+                    <td class="img-thumbnail"> <a href="@Url.Action("GreetingCard","Home", new { id = temp.Id })"> <img src="@Url.Content("~/Content/img/e-cards/" + temp.ImageName)" alt="Alternate Text" class="imageTemp" /></a> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+
+            
+            }
+        </table>
+
+
+    }
+
+</div>
+
+
+@*<ul>
+
+        <li><a href="@Url.Action("GreetingCard","Home", new { id = temp.Id })"> <img src="@Url.Content("~/Content/img/e-cards/" + temp.ImageName)" alt="Alternate Text" class="imageTemp" /></a></li>
+        <li>@temp.Name</li>
+
+    </ul>*@
+
